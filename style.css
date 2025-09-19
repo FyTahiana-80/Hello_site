@@ -1,0 +1,77 @@
+/* Importation d'une belle police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Arrière-plan avec un dégradé animé */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6a00, #ee0979);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/* Animation du dégradé */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Style du titre */
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease-out, float 3s ease-in-out infinite;
+}
+
+/* Style du paragraphe */
+p {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0;
+  animation: fadeIn 2s ease-out 1s forwards;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Effet d'apparition douce */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Effet de flottement du texte */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
